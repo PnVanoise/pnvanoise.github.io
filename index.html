@@ -4,8 +4,7 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Identifier un bouquetin — Parc National de la Vanoise</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#F0EDE6;--surf:#FAFAF6;--gdk:#1C3829;--g:#2D5A3E;--st:#8B7355;--stl:#C4B49A;--sky:#2E6080;--tx:#1A2E22;--txl:#607060}
+<style>:root{--bg:#F0EDE6;--surf:#FAFAF6;--gdk:#1C3829;--g:#2D5A3E;--st:#8B7355;--stl:#C4B49A;--tx:#1A2E22;--txl:#607060}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--tx);min-height:100vh}
 header{background:var(--gdk);color:#fff;padding:1.6rem 1.5rem 4rem;position:relative;overflow:hidden}
@@ -36,8 +35,7 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
 .sw{width:24px;height:24px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .13s;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .sw:hover{transform:scale(1.18)}
 .sw.on{border-color:#111!important;transform:scale(1.12);box-shadow:0 0 0 1.5px #fff inset}
-.c-blanc{background:#FFFFFF;border:1px solid #B0A080!important}
-.c-rouge{background:#E03030}.c-bleu{background:#0070C0}.c-bleu_clair{background:#00B0F0}
+.c-blanc{background:#FFFFFF;border:1px solid #B0A080!important}.c-rouge{background:#E03030}.c-bleu{background:#0070C0}.c-bleu_clair{background:#00B0F0}
 .c-jaune{background:#FFD700;border:1px solid #B0A000!important}.c-jaune_or{background:#FFC000;border:1px solid #A08000!important}
 .c-vert{background:#3D9629}.c-vert_clair{background:#92D050;border:1px solid #608030!important}
 .c-violet{background:#7030A0}.c-rose{background:#CC1090}.c-rose_vif{background:#F040E0}
@@ -54,33 +52,40 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
 .addbtn:hover{border-color:var(--g);color:var(--g)}
 .letters-wrap{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.7rem}
 .lbtn{padding:.22rem .65rem;border-radius:12px;border:1.5px solid var(--stl);background:transparent;cursor:pointer;font-family:monospace;font-size:.8rem;font-weight:700;color:var(--tx);transition:all .13s}
-.lbtn:hover{border-color:var(--g);color:var(--g)}
-.lbtn.on{background:var(--gdk);border-color:var(--gdk);color:#fff}
+.lbtn:hover{border-color:var(--g);color:var(--g)}.lbtn.on{background:var(--gdk);border-color:var(--gdk);color:#fff}
 .rrow{display:flex;justify-content:flex-end;margin-top:.7rem}
 .rbtn{display:inline-flex;align-items:center;gap:.35rem;padding:.38rem .9rem;border-radius:6px;border:1.5px solid var(--stl);background:transparent;cursor:pointer;font-family:inherit;font-size:.73rem;color:var(--txl);transition:all .13s}
 .rbtn:hover{border-color:var(--st);color:var(--st)}
 .rbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem}
 .rbar h2{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gdk)}
 .badge{background:var(--g);color:#fff;font-size:.7rem;padding:.16rem .6rem;border-radius:20px;font-family:sans-serif}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:.85rem}
-.ic{background:var(--surf);border:1px solid rgba(0,0,0,.07);border-radius:10px;padding:.9rem;transition:transform .13s,box-shadow .13s}
-.ic:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.09)}
-.ih{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.25rem}
-.in{font-family:'Playfair Display',serif;font-size:.98rem;color:var(--gdk)}
-.ico{font-size:.6rem;font-family:monospace;background:rgba(0,0,0,.06);color:var(--txl);padding:.1rem .32rem;border-radius:3px}
-.imeta{font-size:.71rem;color:var(--txl);margin-bottom:.55rem}
-.marks{display:flex;gap:.55rem;align-items:flex-end;flex-wrap:wrap}
-.mitem{display:flex;flex-direction:column;align-items:center;gap:.15rem}
-.mlbl{font-size:.56rem;color:var(--txl);text-transform:uppercase;letter-spacing:.05em}
-.halves{display:flex;gap:1px;border-radius:3px;overflow:hidden;border:1px solid rgba(0,0,0,.1)}
-.h{display:flex;align-items:center;justify-content:center}
-.cv{display:flex;flex-direction:column;align-items:center;gap:.15rem}
-.cb2{display:flex;border-radius:3px;overflow:hidden;border:1px solid rgba(0,0,0,.12)}
-.cb{height:13px;display:flex;align-items:center;justify-content:center}
-.vsep{width:1px;background:rgba(255,255,255,.25)}
-.nomark{font-size:.62rem;color:var(--txl);font-style:italic}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.9rem}
+/* ── CARTE ANIMAL ── */
+.ic{background:var(--surf);border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1rem;transition:transform .13s,box-shadow .13s;display:flex;flex-direction:column;align-items:center;text-align:center}
+.ic:hover{transform:translateY(-2px);box-shadow:0 5px 18px rgba(0,0,0,.09)}
+.in{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gdk);margin-bottom:.15rem}
+.imeta{font-size:.72rem;color:var(--txl);margin-bottom:.85rem}
+/* Marques — 2 rangées */
+.marks2{display:flex;flex-direction:column;align-items:center;gap:.55rem;width:100%}
+/* Rangée oreilles */
+.ears-row{display:flex;align-items:flex-end;justify-content:center;gap:1.2rem}
+.ear-grp{display:flex;flex-direction:column;align-items:center;gap:.2rem}
+.ear-lbl{font-size:.58rem;color:var(--txl);text-transform:uppercase;letter-spacing:.05em}
+.ear-sq{display:flex;gap:2px}
+/* Rangée collier */
+.collar-row{display:flex;align-items:flex-end;justify-content:center;gap:0}
+.zone-grp{display:flex;flex-direction:column;align-items:center;gap:.2rem}
+.zone-lbl{font-size:.58rem;color:var(--txl);text-transform:uppercase;letter-spacing:.05em}
+.zone-sq{display:flex;gap:2px}
+.zone-sep{width:10px}
+/* Carré de couleur */
+.sq{width:22px;height:22px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700}
+.sq-empty{background:rgba(0,0,0,.07);border-radius:3px;width:22px;height:22px}
+.nomark{font-size:.62rem;color:var(--txl);font-style:italic;margin-top:.3rem}
 .nores{grid-column:1/-1;text-align:center;padding:3rem 1rem;color:var(--txl)}
 .nores h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--gdk);margin-bottom:.4rem}
+.loading{grid-column:1/-1;text-align:center;padding:3rem;color:var(--txl);font-style:italic}
+.err{grid-column:1/-1;text-align:center;padding:2rem;color:#c0392b;background:#fdf2f2;border-radius:8px;margin:1rem 0}
 </style>
 </head>
 <body>
@@ -88,7 +93,7 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
 <div class="hi">
   <div class="ey">Parc National de la Vanoise — Science citoyenne</div>
   <h1>Identifier un bouquetin marqué</h1>
-  <p class="sub">Renseignez les marques observées pour trouver l'animal, puis notez son code pour le formulaire ODK.</p>
+  <p class="sub">Renseignez les marques observées pour trouver l'animal, puis notez son nom pour le formulaire ODK.</p>
 </div>
 <div class="mtn"><svg viewBox="0 0 1400 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 70L0 48L100 22L220 42L360 8L480 35L560 18L660 40L780 6L880 28L980 10L1080 32L1180 14L1300 36L1400 20L1400 70Z" fill="#152E20" opacity=".7"/><path d="M0 70L0 60L150 42L300 58L430 32L530 52L640 40L760 55L860 26L960 46L1060 36L1200 50L1400 38L1400 70Z" fill="#0E1E14" opacity=".5"/></svg></div>
 </header>
@@ -136,9 +141,7 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
     </svg>
     <div style="font-size:.58rem;color:var(--txl);text-align:center;line-height:1.5">Se colore selon<br>vos sélections</div>
   </div>
-
   <div>
-    <!-- Sexe -->
     <div class="card">
       <div class="ct"><span class="sn">1</span>Sexe</div>
       <div class="row">
@@ -147,8 +150,6 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
         <button class="btn" data-sex="F">♀ Femelle</button>
       </div>
     </div>
-
-    <!-- Oreilles -->
     <div class="card">
       <div class="ct"><span class="sn">2</span>Boucles aux oreilles</div>
       <div class="egrid">
@@ -180,8 +181,6 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
         </div>
       </div>
     </div>
-
-    <!-- Collier -->
     <div class="card">
       <div class="ct"><span class="sn">3</span>Collier</div>
       <div class="row" id="collar-pres">
@@ -194,24 +193,21 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
         <button class="btn" data-ct="letters">Lettres / Codes</button>
       </div>
       <div class="czones" id="color-zones">
-        <div class="czrow">
-          <span class="czlbl">Gauche</span>
+        <div class="czrow"><span class="czlbl">Gauche</span>
           <div class="c2w">
             <div><div class="c2s">Couleur 1</div><div class="sw-row" id="sw-cg"></div></div>
             <div id="cg2-wrap" style="display:none"><div class="c2s">Couleur 2</div><div class="sw-row" id="sw-cg2"></div></div>
             <button class="addbtn" id="add-cg2">+ 2e couleur</button>
           </div>
         </div>
-        <div class="czrow">
-          <span class="czlbl">Centre</span>
+        <div class="czrow"><span class="czlbl">Centre</span>
           <div class="c2w">
             <div><div class="c2s">Couleur 1</div><div class="sw-row" id="sw-cc1"></div></div>
             <div id="cc2-wrap" style="display:none"><div class="c2s">Couleur 2</div><div class="sw-row" id="sw-cc2"></div></div>
             <button class="addbtn" id="add-cc2">+ 2e couleur</button>
           </div>
         </div>
-        <div class="czrow">
-          <span class="czlbl">Droite</span>
+        <div class="czrow"><span class="czlbl">Droite</span>
           <div class="c2w">
             <div><div class="c2s">Couleur 1</div><div class="sw-row" id="sw-cd"></div></div>
             <div id="cd2-wrap" style="display:none"><div class="c2s">Couleur 2</div><div class="sw-row" id="sw-cd2"></div></div>
@@ -224,16 +220,13 @@ main{max-width:980px;margin:0 auto;padding:1.6rem 1.2rem 4rem}
         <div class="letters-wrap" id="letter-btns"></div>
       </div>
     </div>
-
     <div class="rrow"><button class="rbtn" onclick="resetAll()">↺ Réinitialiser</button></div>
   </div>
 </div>
-
 <div class="rbar"><h2>Animaux correspondants</h2><span class="badge" id="cnt">—</span></div>
 <div class="grid" id="grid"></div>
 </main>
 <script>
-const DATA=[{"code": "MOD-229", "sexe": "F", "nom": "OTTAWA", "og_av": "blanc", "og_ar": "vert", "od_av": "blanc", "od_ar": "vert", "c_g": "blanc", "c_g2": null, "c_c1": "blanc", "c_c2": "vert", "c_d": "blanc", "c_d2": null}, {"code": "MOD-276", "sexe": "F", "nom": "OBSTINÉE", "og_av": "bleu", "og_ar": "bleu", "od_av": "rouge", "od_ar": "rouge", "c_g": "bleu", "c_g2": null, "c_c1": "bleu", "c_c2": "rouge", "c_d": "rouge", "c_d2": null}, {"code": "MOD-259", "sexe": "F", "nom": "KASSIOPÉE", "og_av": "rouge", "og_ar": "rouge", "od_av": "rose", "od_ar": "rose", "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "noir", "c_d": "noir", "c_d2": null}, {"code": "MOD-257", "sexe": "F", "nom": "LUNE", "og_av": "blanc", "og_ar": "blanc", "od_av": "violet", "od_ar": "violet", "c_g": "blanc", "c_g2": null, "c_c1": "blanc", "c_c2": "noir", "c_d": "noir", "c_d2": null}, {"code": "MOD-267", "sexe": "F", "nom": "QUERCIA", "og_av": "jaune", "og_ar": "jaune", "od_av": "bleu", "od_ar": "bleu", "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "bleu", "c_d": "bleu", "c_d2": null}, {"code": "MOD-208", "sexe": "F", "nom": "JACKIE", "og_av": "rouge", "og_ar": "rouge", "od_av": "blanc", "od_ar": "blanc", "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "blanc", "c_d": "blanc", "c_d2": null}, {"code": "MOD-198", "sexe": "F", "nom": "KATARINA", "og_av": null, "og_ar": null, "od_av": "orange", "od_ar": "orange", "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "noir", "c_d": "jaune", "c_d2": null}, {"code": "MOD-253", "sexe": "F", "nom": "PIVOINE", "og_av": "rouge", "og_ar": "rouge", "od_av": "rouge", "od_ar": "rouge", "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "rouge", "c_d": "rouge", "c_d2": null}, {"code": "MOD-261", "sexe": "F", "nom": "ISIS", "og_av": "rouge", "og_ar": "jaune", "od_av": "jaune", "od_ar": "rouge", "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "rouge", "c_d": "jaune", "c_d2": null}, {"code": "MOD-310", "sexe": "F", "nom": "PAELLA", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": null, "c_d": "jaune", "c_d2": null}, {"code": "MOD-314", "sexe": "F", "nom": "PATASTROPHE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "rouge", "c_d": "rouge", "c_d2": null}, {"code": "MOD-266", "sexe": "F", "nom": "PISTACHE", "og_av": null, "og_ar": null, "od_av": "rouge", "od_ar": "rouge", "c_g": "vert", "c_g2": null, "c_c1": "vert", "c_c2": null, "c_d": "vert", "c_d2": null}, {"code": "MOD-324", "sexe": "F", "nom": "SUCETTE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": "noir", "c_c1": "rouge", "c_c2": "noir", "c_d": "rouge", "c_d2": "noir"}, {"code": "MOD-214", "sexe": "F", "nom": "PÂQUERETTE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": "vert", "c_c2": "rouge", "c_d": "rouge", "c_d2": null}, {"code": "", "sexe": "F", "nom": "MARGHERITA", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": "vert", "c_c2": "rouge", "c_d": "rouge", "c_d2": null}, {"code": "MOD-309", "sexe": "F", "nom": "LAZULI", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "blanc", "c_g2": null, "c_c1": "blanc", "c_c2": "bleu", "c_d": "bleu", "c_d2": null}, {"code": "MOD-164", "sexe": "F", "nom": "JEANETTE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "bleu", "c_g2": null, "c_c1": "bleu", "c_c2": "jaune", "c_d": "jaune", "c_d2": null}, {"code": "MOD-263", "sexe": "F", "nom": "ORPHÉE", "og_av": null, "og_ar": null, "od_av": "orange", "od_ar": "vert", "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "vert", "c_d": "vert", "c_d2": null}, {"code": "MOD-262", "sexe": "F", "nom": "JUNE", "og_av": "rose", "og_ar": "rose", "od_av": "jaune", "od_ar": "jaune", "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "jaune", "c_d": "jaune", "c_d2": null}, {"code": "MOD-306", "sexe": "F", "nom": "NEOUVIELLE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "vert", "c_d2": null}, {"code": "MOD-189", "sexe": "F", "nom": "TOUPIE", "og_av": "noir", "og_ar": "lilas", "od_av": null, "od_ar": null, "c_g": "lettre:P", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-205", "sexe": "F", "nom": "EVASION", "og_av": "vert", "og_ar": "vert", "od_av": "vert", "od_ar": "vert", "c_g": "bleu", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-285", "sexe": "F", "nom": "LIPA", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": null, "c_c2": "vert", "c_d": "vert", "c_d2": null}, {"code": "MOD-248", "sexe": "F", "nom": "PAULETTE", "og_av": "violet", "og_ar": "violet", "od_av": "violet", "od_ar": "violet", "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "noir", "c_d": "noir", "c_d2": null}, {"code": "MOD-304", "sexe": "F", "nom": "RÊVEUSE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "blanc", "c_d2": null}, {"code": "MOD-307", "sexe": "F", "nom": "SOTTISE", "og_av": "rouge", "og_ar": "jaune", "od_av": "jaune", "od_ar": "rouge", "c_g": "noir", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "noir", "c_d2": null}, {"code": "MOD-322", "sexe": "F", "nom": "TENTATIVE", "og_av": "rouge", "og_ar": "vert", "od_av": "vert", "od_ar": "rouge", "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "rouge", "c_d2": null}, {"code": "MOD-286", "sexe": "F", "nom": "ROXANE", "og_av": "bleu", "og_ar": "bleu", "od_av": "bleu", "od_ar": "bleu", "c_g": "lettre:X", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "lettre:X", "c_d2": null}, {"code": "MOD-283", "sexe": "F", "nom": "ROXY", "og_av": "bleu_clair", "og_ar": "bleu_clair", "od_av": "bleu_clair", "od_ar": "bleu_clair", "c_g": "lettre:Y", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "lettre:Y", "c_d2": null}, {"code": "MOD-251", "sexe": "F", "nom": "QUEEN", "og_av": "rouge", "og_ar": "bleu", "od_av": "bleu", "od_ar": "rouge", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-260", "sexe": "F", "nom": "RAINETTE", "og_av": "vert", "og_ar": "vert", "od_av": "vert", "od_ar": "vert", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-311", "sexe": "F", "nom": "REBELLE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": null, "c_d": "jaune", "c_d2": null}, {"code": "MOD-323", "sexe": "F", "nom": "QUESTION", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "bleu", "c_g2": null, "c_c1": "bleu", "c_c2": "bleu", "c_d": "bleu", "c_d2": null}, {"code": "MOD-328", "sexe": "F", "nom": "RAIPONCE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "bleu", "c_d": "bleu", "c_d2": null}, {"code": "MOD-231", "sexe": "F", "nom": "MERINGUE", "og_av": "blanc", "og_ar": "blanc", "od_av": "blanc", "od_ar": "blanc", "c_g": "blanc", "c_g2": null, "c_c1": "blanc", "c_c2": "blanc", "c_d": "blanc", "c_d2": null}, {"code": "MOD-291", "sexe": "F", "nom": "RACLETTE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "jaune", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "jaune", "c_d2": null}, {"code": "MOD-312", "sexe": "F", "nom": "RÉVOLUTION", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "bleu", "c_g2": null, "c_c1": "bleu", "c_c2": "blanc", "c_d": "blanc", "c_d2": null}, {"code": "MOD-300", "sexe": "F", "nom": "NONETTE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "blanc", "c_g2": null, "c_c1": "blanc", "c_c2": "rouge", "c_d": "rouge", "c_d2": null}, {"code": "", "sexe": "F", "nom": "INTRÉPIDE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "noir", "c_g2": null, "c_c1": "rouge", "c_c2": "noir", "c_d": "noir", "c_d2": null}, {"code": "MOD-191", "sexe": "F", "nom": "KÉTAMINE", "og_av": "rouge", "og_ar": "rouge", "od_av": "vert", "od_ar": "vert", "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "noir", "c_d": "noir", "c_d2": null}, {"code": "", "sexe": "F", "nom": "PARRACHÉE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "vert", "c_d": "rouge", "c_d2": null}, {"code": "MOD-318", "sexe": "F", "nom": "JOUBARBE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "bleu", "c_g2": null, "c_c1": "bleu", "c_c2": null, "c_d": "bleu", "c_d2": null}, {"code": "MOD-296", "sexe": "F", "nom": "OCARINA", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "vert", "c_d": "jaune", "c_d2": null}, {"code": "MOD-288", "sexe": "F", "nom": "QUICK-STEP", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "blanc", "c_g2": null, "c_c1": "blanc", "c_c2": "noir", "c_d": "blanc", "c_d2": null}, {"code": "MOD-270", "sexe": "F", "nom": "HERMINE", "og_av": "rouge", "og_ar": "rouge", "od_av": "jaune", "od_ar": "jaune", "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "jaune", "c_d": "jaune", "c_d2": null}, {"code": "MOD-154", "sexe": "F", "nom": "JONQUILLE", "og_av": "jaune", "og_ar": "noir", "od_av": null, "od_ar": null, "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": null, "c_d": "jaune", "c_d2": null}, {"code": "MOD-230", "sexe": "F", "nom": "ODESSA", "og_av": "jaune", "og_ar": "bleu_clair", "od_av": "bleu_clair", "od_ar": "jaune", "c_g": "bleu", "c_g2": null, "c_c1": "jaune", "c_c2": "bleu", "c_d": "bleu", "c_d2": null}, {"code": "MOD-321", "sexe": "F", "nom": "LOANNA", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "rouge", "c_d": "rouge", "c_d2": null}, {"code": "MOD-297", "sexe": "F", "nom": "RUGBY", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "noir", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "noir", "c_d2": null}, {"code": "MOD-298", "sexe": "F", "nom": "Q-QUETTE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "rouge", "c_d2": null}, {"code": "MOD-320", "sexe": "F", "nom": "MELMISE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": null, "c_d": "rouge", "c_d2": null}, {"code": "MOD-293", "sexe": "F", "nom": "ROULADE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "blanc", "c_d2": null}, {"code": "MOD-313", "sexe": "F", "nom": "TEMPÊTE", "og_av": "blanc", "og_ar": "blanc", "od_av": "blanc", "od_ar": "blanc", "c_g": "noir", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "noir", "c_d2": null}, {"code": "MOD-315", "sexe": "F", "nom": "TATA-WIN", "og_av": "rose", "og_ar": "rose", "od_av": "bleu_clair", "od_ar": "bleu_clair", "c_g": "noir", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": "noir", "c_d2": null}, {"code": "MOD-195", "sexe": "F", "nom": "JASMINE", "og_av": "jaune", "og_ar": "jaune", "od_av": "lilas", "od_ar": "lilas", "c_g": "lettre:M", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-269", "sexe": "F", "nom": "QUIET", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "bleu", "c_g2": null, "c_c1": "rouge", "c_c2": "bleu", "c_d": "bleu", "c_d2": null}, {"code": "MOD-284", "sexe": "F", "nom": "HELIANTHE", "og_av": "jaune", "og_ar": "jaune", "od_av": "jaune", "od_ar": "jaune", "c_g": "jaune", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-268", "sexe": "F", "nom": "QUARTZ", "og_av": "vert_clair", "og_ar": "vert_clair", "od_av": "rose_vif", "od_ar": "rose_vif", "c_g": "bleu", "c_g2": null, "c_c1": "bleu", "c_c2": "noir", "c_d": "noir", "c_d2": null}, {"code": "MOD-287", "sexe": "F", "nom": "SATANIQUE", "og_av": "blanc", "og_ar": "blanc", "od_av": "rouge", "od_ar": "rouge", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-", "sexe": "M", "nom": "O'LIT", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": "blanc", "c_d": null, "c_d2": null}, {"code": "MOD-243", "sexe": "M", "nom": "OLIVE", "og_av": "blanc", "og_ar": "blanc", "od_av": "vert", "od_ar": "vert", "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": "blanc", "c_d": "vert", "c_d2": null}, {"code": "MOD-244", "sexe": "M", "nom": "MICROBE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": "vert", "c_c2": "vert", "c_d": "noir", "c_d2": null}, {"code": "MOD-220", "sexe": "M", "nom": "JUMBO", "og_av": "rouge", "og_ar": "vert", "od_av": "vert", "od_ar": "rouge", "c_g": "rouge", "c_g2": null, "c_c1": "rouge", "c_c2": "rouge", "c_d": "vert", "c_d2": null}, {"code": "MOD-235", "sexe": "M", "nom": "KIAORA", "og_av": null, "og_ar": null, "od_av": "rouge", "od_ar": "noir", "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "jaune", "c_d": "rouge", "c_d2": null}, {"code": "MOD-237", "sexe": "M", "nom": "JAPON", "og_av": "blanc", "og_ar": "blanc", "od_av": "rouge", "od_ar": "rouge", "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": "blanc", "c_d": "rouge", "c_d2": null}, {"code": "MOD-236", "sexe": "M", "nom": "NOUGAT", "og_av": "vert", "og_ar": "vert", "od_av": "vert", "od_ar": "vert", "c_g": "vert", "c_g2": null, "c_c1": "vert", "c_c2": "vert", "c_d": null, "c_d2": null}, {"code": "MOD-308", "sexe": "M", "nom": "PATRIOTE", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "jaune", "c_d": "noir", "c_d2": null}, {"code": "MOD-210", "sexe": "M", "nom": "MICHEL", "og_av": null, "og_ar": null, "od_av": "blanc", "od_ar": "blanc", "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": "blanc", "c_d": "bleu", "c_d2": null}, {"code": "MOD-228", "sexe": "M", "nom": "MAYOU", "og_av": null, "og_ar": null, "od_av": "blanc", "od_ar": "blanc", "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "blanc", "c_d": "noir", "c_d2": null}, {"code": "MOD-213", "sexe": "M", "nom": "JUMPY", "og_av": "rouge", "og_ar": "rouge", "od_av": "blanc", "od_ar": "blanc", "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": "rouge", "c_d": "blanc", "c_d2": null}, {"code": "MOD-217", "sexe": "M", "nom": "KING", "og_av": "rouge", "og_ar": "jaune", "od_av": null, "od_ar": null, "c_g": null, "c_g2": null, "c_c1": null, "c_c2": "jaune", "c_d": "rouge", "c_d2": null}, {"code": "MOD-218", "sexe": "M", "nom": "KAAMELOTT", "og_av": null, "og_ar": "blanc", "od_av": "blanc", "od_ar": null, "c_g": "bleu", "c_g2": null, "c_c1": null, "c_c2": "blanc", "c_d": "bleu", "c_d2": null}, {"code": "MODF-273", "sexe": "M", "nom": "QUEYRELLIN", "og_av": "vert", "og_ar": "blanc", "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": "vert", "c_c2": "blanc", "c_d": "vert", "c_d2": null}, {"code": "MOD-239", "sexe": "M", "nom": "LUKRAINE", "og_av": "bleu_clair", "og_ar": "bleu_clair", "od_av": "jaune", "od_ar": "jaune", "c_g": "bleu", "c_g2": null, "c_c1": null, "c_c2": "jaune", "c_d": "bleu", "c_d2": null}, {"code": "MOD-252", "sexe": "M", "nom": "PUMA", "og_av": "orange", "og_ar": "orange", "od_av": "rose", "od_ar": "rose", "c_g": "jaune", "c_g2": null, "c_c1": "jaune", "c_c2": "jaune", "c_d": "noir", "c_d2": null}, {"code": "MOD-249", "sexe": "M", "nom": "ORIGAN", "og_av": "vert", "og_ar": "vert", "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": null, "c_c2": "jaune", "c_d": "vert", "c_d2": null}, {"code": "MOD-216", "sexe": "M", "nom": "NEMO", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "blanc", "c_g2": null, "c_c1": null, "c_c2": "blanc", "c_d": "noir", "c_d2": null}, {"code": "MOD-182", "sexe": "M", "nom": "LUTIN", "og_av": "rouge", "og_ar": "bleu", "od_av": "rouge", "od_ar": "bleu", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": "noir", "c_d": "bleu", "c_d2": null}, {"code": "MOD-277", "sexe": "M", "nom": "NEGUS", "og_av": "rose", "og_ar": "rose", "od_av": "rose", "od_ar": "rose", "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "noir", "c_d": "noir", "c_d2": null}, {"code": "MOD-241", "sexe": "M", "nom": "NESTOR", "og_av": "rose", "og_ar": "jaune", "od_av": "jaune", "od_ar": "rose", "c_g": "jaune", "c_g2": null, "c_c1": null, "c_c2": "jaune", "c_d": "bleu", "c_d2": null}, {"code": "MOD-256", "sexe": "M", "nom": "ORSEC", "og_av": "jaune", "og_ar": "rose", "od_av": "rose", "od_ar": "jaune", "c_g": "jaune", "c_g2": null, "c_c1": null, "c_c2": "jaune", "c_d": "vert", "c_d2": null}, {"code": "MOD-240", "sexe": "M", "nom": "OBIWAN", "og_av": "lilas", "og_ar": "lilas", "od_av": "bleu_clair", "od_ar": "bleu_clair", "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "noir", "c_d": "bleu", "c_d2": null}, {"code": "MOD-197", "sexe": "M", "nom": "MINUS", "og_av": "orange", "og_ar": "orange", "od_av": "rose_vif", "od_ar": "rose_vif", "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "noir", "c_d": "jaune", "c_d2": null}, {"code": "MOD-278", "sexe": "M", "nom": "OLIBRIUS", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "vert", "c_g2": null, "c_c1": null, "c_c2": "vert", "c_d": "jaune", "c_d2": null}, {"code": "MOD-305", "sexe": "M", "nom": "PAVOT", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": "rouge", "c_d": null, "c_d2": null}, {"code": "MOD-192", "sexe": "M", "nom": "KHEOPS", "og_av": "noir", "og_ar": "jaune", "od_av": null, "od_ar": "jaune", "c_g": "lettre:9", "c_g2": null, "c_c1": null, "c_c2": "lettre:9", "c_d": null, "c_d2": null}, {"code": "MOD-187", "sexe": "M", "nom": "IGLOO", "og_av": "rouge", "og_ar": "rouge", "od_av": "noir", "od_ar": "noir", "c_g": "bleu", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-193", "sexe": "M", "nom": "JOKER", "og_av": "noir", "og_ar": "rouge", "od_av": null, "od_ar": null, "c_g": "bleu_clair", "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-282", "sexe": "M", "nom": "ONYX", "og_av": "rose", "og_ar": "rose", "od_av": null, "od_ar": null, "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "noir", "c_d": "vert", "c_d2": null}, {"code": "MOD-238", "sexe": "M", "nom": "MUGUET", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "bleu", "c_g2": null, "c_c1": null, "c_c2": "bleu", "c_d": null, "c_d2": null}, {"code": "MOD-280", "sexe": "M", "nom": "Q'PIDON", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": "rouge", "c_d": "bleu", "c_d2": null}, {"code": "MOD-199", "sexe": "M", "nom": "LOUPIOT", "og_av": "jaune", "og_ar": "jaune", "od_av": "lilas", "od_ar": "lilas", "c_g": "jaune", "c_g2": null, "c_c1": null, "c_c2": "jaune", "c_d": null, "c_d2": null}, {"code": "MOD-175", "sexe": "M", "nom": "PIF", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": "rouge", "c_d": "blanc", "c_d2": null}, {"code": "MOD-223", "sexe": "M", "nom": "PIKATCHU", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "noir", "c_g2": null, "c_c1": "noir", "c_c2": "noir", "c_d": "blanc", "c_d2": null}, {"code": "MOD-232", "sexe": "M", "nom": "OSIRIS", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": "rouge", "c_d": "blanc", "c_d2": null}, {"code": "MOD-258", "sexe": "M", "nom": "PEPITO", "og_av": "jaune_or", "og_ar": "bleu_clair", "od_av": null, "od_ar": null, "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": "rouge", "c_d": "noir", "c_d2": null}, {"code": "MOD-254", "sexe": "M", "nom": "QECHUA", "og_av": "rouge", "og_ar": "vert", "od_av": "rouge", "od_ar": "vert", "c_g": "rouge", "c_g2": null, "c_c1": null, "c_c2": "rouge", "c_d": null, "c_d2": null}, {"code": "MOD-146", "sexe": "M", "nom": "GIANT", "og_av": "noir", "og_ar": "noir", "od_av": "vert_clair", "od_ar": "vert_clair", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-175", "sexe": "M", "nom": "KID", "og_av": "jaune", "og_ar": "jaune", "od_av": "rouge", "od_ar": "rouge", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-123", "sexe": "M", "nom": "GUIGNOL", "og_av": "jaune", "og_ar": "jaune", "od_av": null, "od_ar": null, "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-178", "sexe": "M", "nom": "JULES", "og_av": null, "og_ar": null, "od_av": null, "od_ar": null, "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-222", "sexe": "M", "nom": "ORCHIS", "og_av": "vert", "og_ar": "vert", "od_av": "orange", "od_ar": "orange", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-208", "sexe": "M", "nom": "NOUNOURS", "og_av": "rose_vif", "og_ar": "rose_vif", "od_av": "orange", "od_ar": "orange", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-317", "sexe": "M", "nom": "TROPICO", "og_av": "lilas", "og_ar": "vert", "od_av": "vert", "od_ar": "lilas", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-149", "sexe": "M", "nom": "IBESQUE", "og_av": null, "og_ar": null, "od_av": "noir", "od_ar": "noir", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-183", "sexe": "M", "nom": "GAVROCHE", "og_av": "vert_clair", "og_ar": "noir", "od_av": "vert_clair", "od_ar": "noir", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-212", "sexe": "M", "nom": "PLUMEAU", "og_av": null, "og_ar": null, "od_av": "vert_clair", "od_ar": "jaune", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-263", "sexe": "M", "nom": "ROOKIE", "og_av": "vert", "og_ar": "orange", "od_av": "vert", "od_ar": "vert", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-275", "sexe": "M", "nom": "QUIZZ", "og_av": "bleu", "og_ar": "jaune", "od_av": "jaune", "od_ar": "bleu", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-274", "sexe": "M", "nom": "POLISSON", "og_av": "blanc", "og_ar": "blanc", "od_av": "blanc", "od_ar": "blanc", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-294", "sexe": "M", "nom": "RATE", "og_av": "bleu_clair", "og_ar": "bleu_clair", "od_av": "bleu_clair", "od_ar": "bleu_clair", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-319", "sexe": "M", "nom": "TORINO", "og_av": "bleu_clair", "og_ar": "blanc", "od_av": "blanc", "od_ar": "bleu_clair", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-301", "sexe": "M", "nom": "QUIPROQUOS", "og_av": "rouge", "og_ar": "rouge", "od_av": "rouge", "od_ar": "rouge", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-303", "sexe": "M", "nom": "THÉO", "og_av": "jaune", "og_ar": "jaune", "od_av": "jaune", "od_ar": "jaune", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-299", "sexe": "M", "nom": "TITAN", "og_av": "rouge", "og_ar": "rouge", "od_av": "rose", "od_ar": "rose", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-290", "sexe": "M", "nom": "QUIDDITCH", "og_av": "jaune", "og_ar": "rouge", "od_av": "rouge", "od_ar": "jaune", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-316", "sexe": "M", "nom": "TINTIN", "og_av": "blanc", "og_ar": "rouge", "od_av": "rouge", "od_ar": "blanc", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-325", "sexe": "M", "nom": "TRITON", "og_av": "jaune", "og_ar": "rose", "od_av": "rose", "od_ar": "jaune", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-326", "sexe": "M", "nom": "SALTINBANQUE", "og_av": "bleu_clair", "og_ar": "rouge", "od_av": "rouge", "od_ar": "bleu_clair", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}, {"code": "MOD-", "sexe": "M", "nom": "SOLEIL", "og_av": "bleu", "og_ar": "bleu", "od_av": "bleu", "od_ar": "bleu", "c_g": null, "c_g2": null, "c_c1": null, "c_c2": null, "c_d": null, "c_d2": null}];
 const C={
   blanc:{l:'Blanc',h:'#FFFFFF'},rouge:{l:'Rouge',h:'#E03030'},
   bleu:{l:'Bleu',h:'#0070C0'},bleu_clair:{l:'Bleu clair',h:'#00B0F0'},
@@ -246,32 +239,67 @@ const C={
 };
 const EAR_C=Object.keys(C);
 const COL_C=['blanc','rouge','bleu','bleu_clair','jaune','vert','noir'];
+const KNOWN=new Set(Object.keys(C));
+const CURRENT_YEAR=2026;
 
-// ── STATE ──────────────────────────────────────────────────────────────
-const F={
-  sex:'',
-  og_n:'any',og_av:null,og_ar:null,
-  od_n:'any',od_av:null,od_ar:null,
-  cp:'any',ct:'colors',
-  c_g:null,c_g2:null,
-  c_c1:null,c_c2:null,
-  c_d:null,c_d2:null,
-  c_lettre:null,
-};
+let DATA=[];
+
+function parseVal(v){
+  if(!v||v.trim()==='')return null;
+  v=v.trim();
+  if(KNOWN.has(v))return v;
+  if(/^[A-Z0-9]{1,3}$/.test(v))return 'lettre:'+v;
+  return null;
+}
+
+function parseCSV(text){
+  const lines=text.trim().split(/\r?\n/);
+  const headers=lines[0].split(',').map(h=>h.trim());
+  return lines.slice(1).filter(l=>l.trim()).map(line=>{
+    const vals=line.split(',');
+    const obj={};
+    headers.forEach((h,i)=>{obj[h]=(vals[i]||'').trim();});
+    const nee=parseInt(obj.nee)||null;
+    return {
+      nom:    obj.nom||'',
+      sexe:   obj.sexe||'',
+      nee:    nee,
+      age:    nee?(CURRENT_YEAR-nee):null,
+      og_av:  parseVal(obj.og_av), og_ar: parseVal(obj.og_ar),
+      od_av:  parseVal(obj.od_av), od_ar: parseVal(obj.od_ar),
+      c_g:    parseVal(obj.c_g),   c_g2:  parseVal(obj.c_g2),
+      c_c1:   parseVal(obj.c_c1),  c_c2:  parseVal(obj.c_c2),
+      c_d:    parseVal(obj.c_d),   c_d2:  parseVal(obj.c_d2),
+    };
+  });
+}
+
+async function loadData(){
+  const grid=document.getElementById('grid');
+  grid.innerHTML='<div class="loading">Chargement des données…</div>';
+  try{
+    const resp=await fetch('./bouquetins.csv');
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    DATA=parseCSV(await resp.text());
+    initUI();render();updateSVG();
+  }catch(e){
+    grid.innerHTML=`<div class="err">⚠️ Impossible de charger bouquetins.csv (${e.message})<br><small>Les deux fichiers doivent être dans le même dossier.</small></div>`;
+  }
+}
+
+const F={sex:'',og_n:'any',og_av:null,og_ar:null,od_n:'any',od_av:null,od_ar:null,
+  cp:'any',ct:'colors',c_g:null,c_g2:null,c_c1:null,c_c2:null,c_d:null,c_d2:null,c_lettre:null};
 const SHOW2={cg:false,cc:false,cd:false};
 
-// ── HELPERS ────────────────────────────────────────────────────────────
 const isL=v=>v&&v.startsWith('lettre:');
 const lChar=v=>v?v.replace('lettre:',''):'';
 function hasCollar(b){return b.c_g||b.c_g2||b.c_c1||b.c_c2||b.c_d||b.c_d2;}
-function hasLetterCollar(b){return [b.c_g,b.c_g2,b.c_c1,b.c_c2,b.c_d,b.c_d2].some(isL);}
+function hasLetterCollar(b){return[b.c_g,b.c_g2,b.c_c1,b.c_c2,b.c_d,b.c_d2].some(isL);}
 function earCols(b,s){
   const r=new Set();
   [b[s+'_av'],b[s+'_ar']].forEach(v=>{if(v&&!isL(v))r.add(v);});
   return r;
 }
-
-// ── FILTER LOGIC ───────────────────────────────────────────────────────
 function zoneMatch(v1,v2,s1,s2){
   if(!s1&&!s2)return true;
   const vals=[v1,v2].filter(v=>v&&!isL(v));
@@ -284,11 +312,7 @@ function matchEar(b,side,n,av,ar){
   if(n==='any')return true;
   const c=earCols(b,side);
   if(n==='0')return c.size===0;
-  if(n==='1'){
-    if(c.size===0)return false;
-    if(!av)return true;
-    return c.has(av)&&c.size===1;
-  }
+  if(n==='1'){if(c.size===0)return false;if(!av)return true;return c.has(av)&&c.size===1;}
   if(n==='2'){
     if(c.size<2)return false;
     if(!av&&!ar)return c.size===2;
@@ -306,11 +330,8 @@ function matches(b){
     if(!hasCollar(b))return false;
     if(F.ct==='letters'){
       if(!hasLetterCollar(b))return false;
-      if(F.c_lettre){
-        const all=[b.c_g,b.c_g2,b.c_c1,b.c_c2,b.c_d,b.c_d2];
-        if(!all.some(v=>v&&lChar(v)===F.c_lettre))return false;
-      }
-    } else {
+      if(F.c_lettre){const all=[b.c_g,b.c_g2,b.c_c1,b.c_c2,b.c_d,b.c_d2];if(!all.some(v=>v&&lChar(v)===F.c_lettre))return false;}
+    }else{
       if(!zoneMatch(b.c_g,b.c_g2,F.c_g,F.c_g2))return false;
       if(!zoneMatch(b.c_c1,b.c_c2,F.c_c1,F.c_c2))return false;
       if(!zoneMatch(b.c_d,b.c_d2,F.c_d,F.c_d2))return false;
@@ -319,7 +340,6 @@ function matches(b){
   return true;
 }
 
-// ── SVG ────────────────────────────────────────────────────────────────
 const SVGDEF={'sv-og-av':'#C8B890','sv-og-ar':'#B8A880','sv-od-av':'#C8B890','sv-od-ar':'#B8A880'};
 function svgFill(id,col){
   const el=document.getElementById(id);if(!el)return;
@@ -331,78 +351,65 @@ function updateSVG(){
   svgFill('sv-og-ar',F.og_n==='0'?null:(F.og_n==='2'?F.og_ar:F.og_av));
   svgFill('sv-od-av',F.od_n==='0'?null:F.od_av);
   svgFill('sv-od-ar',F.od_n==='0'?null:(F.od_n==='2'?F.od_ar:F.od_av));
-  svgFill('sv-cg', nc?null:F.c_g);
-  svgFill('sv-cg2',nc?null:(F.c_g2||F.c_g));
-  svgFill('sv-cc1',nc?null:F.c_c1);
-  svgFill('sv-cc2',nc?null:(F.c_c2||F.c_c1));
-  svgFill('sv-cd', nc?null:F.c_d);
-  svgFill('sv-cd2',nc?null:(F.c_d2||F.c_d));
+  svgFill('sv-cg', nc?null:F.c_g);   svgFill('sv-cg2',nc?null:(F.c_g2||F.c_g));
+  svgFill('sv-cc1',nc?null:F.c_c1);  svgFill('sv-cc2',nc?null:(F.c_c2||F.c_c1));
+  svgFill('sv-cd', nc?null:F.c_d);   svgFill('sv-cd2',nc?null:(F.c_d2||F.c_d));
 }
 
-// ── SWATCHES ───────────────────────────────────────────────────────────
-function mkSwatch(cid,cols,field){
-  const el=document.getElementById(cid);if(!el)return;
-  el.innerHTML='';
-  cols.forEach(k=>{
-    const b=document.createElement('button');
-    b.className='sw c-'+k; b.title=C[k].l;
-    b.addEventListener('click',()=>{
-      if(F[field]===k){F[field]=null;b.classList.remove('on');}
-      else{el.querySelectorAll('.sw').forEach(x=>x.classList.remove('on'));F[field]=k;b.classList.add('on');}
-      // reveal +2e button for collar primary slots
-      ['c_g','c_c1','c_d'].forEach(f=>{
-        const zone=f==='c_g'?'cg':f==='c_c1'?'cc':'cd';
-        const btn=document.getElementById('add-'+zone+'2');
-        if(btn)btn.style.display=F[f]?'':'none';
+function initUI(){
+  function mkSw(cid,cols,field){
+    const el=document.getElementById(cid);if(!el)return;
+    el.innerHTML='';
+    cols.forEach(k=>{
+      const b=document.createElement('button');
+      b.className='sw c-'+k;b.title=C[k].l;
+      b.addEventListener('click',()=>{
+        if(F[field]===k){F[field]=null;b.classList.remove('on');}
+        else{el.querySelectorAll('.sw').forEach(x=>x.classList.remove('on'));F[field]=k;b.classList.add('on');}
+        ['c_g','c_c1','c_d'].forEach(f=>{
+          const z=f==='c_g'?'cg':f==='c_c1'?'cc':'cd';
+          const btn=document.getElementById('add-'+z+'2');
+          if(btn)btn.style.display=F[f]?'':'none';
+        });
+        render();updateSVG();
       });
-      render();updateSVG();
+      el.appendChild(b);
     });
-    el.appendChild(b);
-  });
-}
-mkSwatch('sw-og-av',EAR_C,'og_av');mkSwatch('sw-og-ar',EAR_C,'og_ar');
-mkSwatch('sw-od-av',EAR_C,'od_av');mkSwatch('sw-od-ar',EAR_C,'od_ar');
-mkSwatch('sw-cg', COL_C,'c_g');  mkSwatch('sw-cg2',COL_C,'c_g2');
-mkSwatch('sw-cc1',COL_C,'c_c1'); mkSwatch('sw-cc2',COL_C,'c_c2');
-mkSwatch('sw-cd', COL_C,'c_d');  mkSwatch('sw-cd2',COL_C,'c_d2');
-
-// ── +2e couleur toggle ─────────────────────────────────────────────────
-function toggle2(zone){
-  SHOW2[zone]=!SHOW2[zone];
-  document.getElementById(zone+'2-wrap').style.display=SHOW2[zone]?'':'none';
-  document.getElementById('add-'+zone+'2').textContent=SHOW2[zone]?'− Retirer':'+ 2e couleur';
-  if(!SHOW2[zone]){
-    const fk=zone==='cg'?'c_g2':zone==='cc'?'c_c2':'c_d2';
-    F[fk]=null;
-    document.querySelectorAll('#sw-'+zone+'2 .sw').forEach(x=>x.classList.remove('on'));
-    render();updateSVG();
   }
+  mkSw('sw-og-av',EAR_C,'og_av');mkSw('sw-og-ar',EAR_C,'og_ar');
+  mkSw('sw-od-av',EAR_C,'od_av');mkSw('sw-od-ar',EAR_C,'od_ar');
+  mkSw('sw-cg',COL_C,'c_g');  mkSw('sw-cg2',COL_C,'c_g2');
+  mkSw('sw-cc1',COL_C,'c_c1');mkSw('sw-cc2',COL_C,'c_c2');
+  mkSw('sw-cd',COL_C,'c_d');  mkSw('sw-cd2',COL_C,'c_d2');
+
+  ['cg','cc','cd'].forEach(z=>{
+    document.getElementById('add-'+z+'2').addEventListener('click',()=>{
+      SHOW2[z]=!SHOW2[z];
+      document.getElementById(z+'2-wrap').style.display=SHOW2[z]?'':'none';
+      document.getElementById('add-'+z+'2').textContent=SHOW2[z]?'− Retirer':'+ 2e couleur';
+      if(!SHOW2[z]){
+        const fk=z==='cg'?'c_g2':z==='cc'?'c_c2':'c_d2';
+        F[fk]=null;document.querySelectorAll('#sw-'+z+'2 .sw').forEach(x=>x.classList.remove('on'));
+        render();updateSVG();
+      }
+    });
+  });
+
+  const letters=[...new Set(DATA.flatMap(b=>[b.c_g,b.c_g2,b.c_c1,b.c_c2,b.c_d,b.c_d2]).filter(isL).map(lChar))].sort();
+  const lb=document.getElementById('letter-btns');lb.innerHTML='';
+  letters.forEach(l=>{
+    const b=document.createElement('button');b.className='lbtn';b.textContent=l;
+    b.addEventListener('click',()=>{
+      if(F.c_lettre===l){F.c_lettre=null;b.classList.remove('on');}
+      else{lb.querySelectorAll('.lbtn').forEach(x=>x.classList.remove('on'));F.c_lettre=l;b.classList.add('on');}
+      render();
+    });
+    lb.appendChild(b);
+  });
 }
-['add-cg2','add-cc2','add-cd2'].forEach(id=>{
-  const z=id.replace('add-','').replace('2','');
-  document.getElementById(id).addEventListener('click',()=>toggle2(z));
-});
 
-// ── LETTER BUTTONS ─────────────────────────────────────────────────────
-const LETTERS=[...new Set(DATA.flatMap(b=>[b.c_g,b.c_g2,b.c_c1,b.c_c2,b.c_d,b.c_d2]).filter(isL).map(lChar))].sort();
-const lb=document.getElementById('letter-btns');
-LETTERS.forEach(l=>{
-  const b=document.createElement('button');
-  b.className='lbtn';b.textContent=l;
-  b.addEventListener('click',()=>{
-    if(F.c_lettre===l){F.c_lettre=null;b.classList.remove('on');}
-    else{lb.querySelectorAll('.lbtn').forEach(x=>x.classList.remove('on'));F.c_lettre=l;b.classList.add('on');}
-    render();
-  });
-  lb.appendChild(b);
-});
-
-// ── WIRING ─────────────────────────────────────────────────────────────
 document.querySelectorAll('.btn[data-sex]').forEach(b=>{
-  b.addEventListener('click',()=>{
-    document.querySelectorAll('.btn[data-sex]').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on');F.sex=b.dataset.sex;render();
-  });
+  b.addEventListener('click',()=>{document.querySelectorAll('.btn[data-sex]').forEach(x=>x.classList.remove('on'));b.classList.add('on');F.sex=b.dataset.sex;render();});
 });
 document.querySelectorAll('.btn[data-ear]').forEach(b=>{
   b.addEventListener('click',()=>{
@@ -410,10 +417,8 @@ document.querySelectorAll('.btn[data-ear]').forEach(b=>{
     document.querySelectorAll(`.btn[data-ear="${e}"]`).forEach(x=>x.classList.remove('on'));
     b.classList.add('on');F[e+'_n']=n;F[e+'_av']=null;F[e+'_ar']=null;
     document.querySelectorAll(`#sw-${e}-av .sw,#sw-${e}-ar .sw`).forEach(x=>x.classList.remove('on'));
-    const sl=document.getElementById(e+'-slots');
-    const ar=document.getElementById(e+'-ar-wrap');
-    const lbl=document.getElementById(e+'-lbl-av');
-    if(n==='0'||n==='any'){sl.style.display='none';}
+    const sl=document.getElementById(e+'-slots'),ar=document.getElementById(e+'-ar-wrap'),lbl=document.getElementById(e+'-lbl-av');
+    if(n==='0'||n==='any')sl.style.display='none';
     else if(n==='1'){sl.style.display='flex';ar.style.display='none';lbl.textContent='Couleur (avant = arrière)';}
     else{sl.style.display='flex';ar.style.display='';lbl.textContent='Avant (face)';}
     render();updateSVG();
@@ -422,8 +427,7 @@ document.querySelectorAll('.btn[data-ear]').forEach(b=>{
 document.querySelectorAll('.btn[data-cp]').forEach(b=>{
   b.addEventListener('click',()=>{
     document.querySelectorAll('.btn[data-cp]').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on');F.cp=b.dataset.cp;
-    clearCollar();
+    b.classList.add('on');F.cp=b.dataset.cp;clearCollar();
     document.getElementById('collar-type').style.display=F.cp==='yes'?'flex':'none';
     document.getElementById('color-zones').classList.toggle('vis',F.cp==='yes'&&F.ct==='colors');
     document.getElementById('letter-zones').style.display=(F.cp==='yes'&&F.ct==='letters')?'':'none';
@@ -433,58 +437,74 @@ document.querySelectorAll('.btn[data-cp]').forEach(b=>{
 document.querySelectorAll('.btn[data-ct]').forEach(b=>{
   b.addEventListener('click',()=>{
     document.querySelectorAll('.btn[data-ct]').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on');F.ct=b.dataset.ct;
-    clearCollar();
+    b.classList.add('on');F.ct=b.dataset.ct;clearCollar();
     document.getElementById('color-zones').classList.toggle('vis',F.ct==='colors');
     document.getElementById('letter-zones').style.display=F.ct==='letters'?'':'none';
     render();updateSVG();
   });
 });
 function clearCollar(){
-  ['c_g','c_g2','c_c1','c_c2','c_d','c_d2'].forEach(k=>F[k]=null);
-  F.c_lettre=null;
-  ['sw-cg','sw-cg2','sw-cc1','sw-cc2','sw-cd','sw-cd2'].forEach(id=>{
-    document.querySelectorAll(`#${id} .sw`).forEach(x=>x.classList.remove('on'));
-  });
+  ['c_g','c_g2','c_c1','c_c2','c_d','c_d2'].forEach(k=>F[k]=null);F.c_lettre=null;
+  ['sw-cg','sw-cg2','sw-cc1','sw-cc2','sw-cd','sw-cd2'].forEach(id=>{document.querySelectorAll(`#${id} .sw`).forEach(x=>x.classList.remove('on'));});
   document.querySelectorAll('.lbtn').forEach(x=>x.classList.remove('on'));
 }
 
-// ── CARD RENDER ────────────────────────────────────────────────────────
-function seg(v,w){
-  if(!v)return`<div class="cb" style="width:${w}px;background:#2E2E2E"></div>`;
-  if(isL(v))return`<div class="cb" style="width:${w+2}px;background:#D8C8A8;color:#333;font-size:6px">${lChar(v)}</div>`;
-  return`<div class="cb" style="width:${w}px;background:${C[v]?.h||'#555'}"></div>`;
+// ── RENDU CARTE ───────────────────────────────────────────────────────────────
+function sq(v){
+  if(!v)return`<div class="sq-empty"></div>`;
+  if(isL(v))return`<div class="sq" style="background:#E0D4B0;color:#333">${lChar(v)}</div>`;
+  const info=C[v];
+  const border=['blanc','jaune','jaune_or','vert_clair','lilas'].includes(v)?'1px solid rgba(0,0,0,.15)':'none';
+  return`<div class="sq" style="background:${info.h};border:${border}"></div>`;
 }
-function half(v,w=13){
-  if(!v)return`<div class="h" style="width:${w}px;height:${w}px;background:rgba(0,0,0,.06)"></div>`;
-  if(isL(v))return`<div class="h" style="width:${w}px;height:${w}px;background:#E0D4B0;font-size:7px;font-weight:700;color:#333">${lChar(v)}</div>`;
-  return`<div class="h" style="width:${w}px;height:${w}px;background:${C[v]?.h||'#aaa'}"></div>`;
-}
+
 function renderCard(b){
   const hc=hasCollar(b);
+  const sexIcon=b.sexe==='M'?'♂':'♀';
+  const ageStr=b.age?`${b.age} ans`:'';
+  const meta=[b.sexe==='M'?'Mâle':'Femelle', ageStr].filter(Boolean).join(' · ');
   return`<div class="ic">
-  <div class="ih"><div class="in">${b.nom}</div>${b.code?`<div class="ico">${b.code}</div>`:''}</div>
-  <div class="imeta">${b.sexe==='M'?'♂ Mâle':'♀ Femelle'}</div>
-  <div class="marks">
-    <div class="mitem"><div class="mlbl">OG</div><div class="halves">${half(b.og_av)}${half(b.og_ar)}</div></div>
-    <div class="mitem"><div class="mlbl">OD</div><div class="halves">${half(b.od_av)}${half(b.od_ar)}</div></div>
-    ${hc?`<div class="mitem cv"><div class="mlbl">Collier&nbsp;G·C·D</div>
-    <div class="cb2">${seg(b.c_g,8)}${seg(b.c_g2,8)}<div class="vsep"></div>${seg(b.c_c1,7)}${seg(b.c_c2,7)}<div class="vsep"></div>${seg(b.c_d,8)}${seg(b.c_d2,8)}</div></div>`
-    :`<div class="nomark">Pas de collier</div>`}
+  <div class="in">${b.nom}</div>
+  <div class="imeta">${sexIcon} ${meta}</div>
+  <div class="marks2">
+    <div class="ears-row">
+      <div class="ear-grp">
+        <div class="ear-sq">${sq(b.og_av)}${sq(b.og_ar)}</div>
+        <div class="ear-lbl">O. Gauche</div>
+      </div>
+      <div class="ear-grp">
+        <div class="ear-sq">${sq(b.od_av)}${sq(b.od_ar)}</div>
+        <div class="ear-lbl">O. Droite</div>
+      </div>
+    </div>
+    ${hc?`<div class="collar-row">
+      <div class="zone-grp">
+        <div class="zone-sq">${sq(b.c_g)}${sq(b.c_g2)}</div>
+        <div class="zone-lbl">Gauche</div>
+      </div>
+      <div class="zone-sep"></div>
+      <div class="zone-grp">
+        <div class="zone-sq">${sq(b.c_c1)}${sq(b.c_c2)}</div>
+        <div class="zone-lbl">Centre</div>
+      </div>
+      <div class="zone-sep"></div>
+      <div class="zone-grp">
+        <div class="zone-sq">${sq(b.c_d)}${sq(b.c_d2)}</div>
+        <div class="zone-lbl">Droite</div>
+      </div>
+    </div>`:`<div class="nomark">Pas de collier</div>`}
   </div>
 </div>`;
 }
 
-// ── RENDER ─────────────────────────────────────────────────────────────
 function render(){
   const list=DATA.filter(matches);
   document.getElementById('cnt').textContent=list.length+' animal'+(list.length>1?'x':'');
   const g=document.getElementById('grid');
-  g.innerHTML=list.length?list.map(renderCard).join('')
-    :'<div class="nores"><h3>Aucune correspondance</h3><p>Essayez de modifier ou réinitialiser les filtres.</p></div>';
+  if(!DATA.length)return;
+  g.innerHTML=list.length?list.map(renderCard).join(''):'<div class="nores"><h3>Aucune correspondance</h3><p>Essayez de modifier ou réinitialiser les filtres.</p></div>';
 }
 
-// ── RESET ──────────────────────────────────────────────────────────────
 function resetAll(){
   Object.assign(F,{sex:'',og_n:'any',og_av:null,og_ar:null,od_n:'any',od_av:null,od_ar:null,
     cp:'any',ct:'colors',c_g:null,c_g2:null,c_c1:null,c_c2:null,c_d:null,c_d2:null,c_lettre:null});
@@ -501,14 +521,13 @@ function resetAll(){
   document.getElementById('letter-zones').style.display='none';
   ['cg2','cc2','cd2'].forEach(z=>{
     document.getElementById(z+'-wrap').style.display='none';
-    const btn=document.getElementById('add-'+z);
+    const btn=document.getElementById('add-'+z+'2');
     if(btn){btn.textContent='+ 2e couleur';btn.style.display='none';}
   });
   document.querySelectorAll('.sw,.lbtn').forEach(b=>b.classList.remove('on'));
   updateSVG();render();
 }
-render();updateSVG();
-
+loadData();
 </script>
 </body>
 </html>
