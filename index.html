@@ -49,7 +49,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3vw,1.8rem);color
 .czlbl{font-size:.63rem;text-transform:uppercase;letter-spacing:.08em;color:var(--st);font-weight:600;min-width:45px;padding-top:.28rem}
 .c2w{display:flex;flex-direction:column;gap:.28rem}
 .c2s{font-size:.56rem;color:var(--txl);margin-bottom:.1rem}
-.addbtn{padding:.15rem .5rem;border-radius:9px;border:1px dashed var(--stl);background:transparent;cursor:pointer;font-family:inherit;font-size:.62rem;color:var(--txl);margin-top:.18rem;display:none;transition:all .13s}
+.addbtn{padding:.15rem .5rem;border-radius:9px;border:1px dashed var(--stl);background:transparent;cursor:pointer;font-family:inherit;font-size:.62rem;color:var(--txl);margin-top:.18rem;display:inline-block;transition:all .13s}
 .addbtn:hover{border-color:var(--g);color:var(--g)}
 .letters-wrap{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.6rem}
 .lbtn{padding:.2rem .6rem;border-radius:11px;border:1.5px solid var(--stl);background:transparent;cursor:pointer;font-family:monospace;font-size:.78rem;font-weight:700;color:var(--tx);transition:all .13s}
@@ -349,11 +349,7 @@ function initUI(){
       b.addEventListener('click',()=>{
         if(F[field]===k){F[field]=null;b.classList.remove('on');}
         else{el.querySelectorAll('.sw').forEach(x=>x.classList.remove('on'));F[field]=k;b.classList.add('on');}
-        ['c_g','c_c1','c_d'].forEach(f=>{
-          const z=f==='c_g'?'cg':f==='c_c1'?'cc':'cd';
-          const btn=document.getElementById('add-'+z+'2');
-          if(btn)btn.style.display=F[f]?'':'none';
-        });
+
         render();updateViewer();
       });
       el.appendChild(b);
@@ -475,7 +471,7 @@ function resetAll(){
   document.getElementById('collar-type').style.display='none';
   document.getElementById('color-zones').classList.remove('vis');
   document.getElementById('letter-zones').style.display='none';
-  ['cg2','cc2','cd2'].forEach(z=>{document.getElementById(z+'-wrap').style.display='none';const btn=document.getElementById('add-'+z+'2');if(btn){btn.textContent='+ 2e couleur';btn.style.display='none';}});
+  ['cg2','cc2','cd2'].forEach(z=>{document.getElementById(z+'-wrap').style.display='none';const btn=document.getElementById('add-'+z+'2');if(btn)btn.textContent='+ 2e couleur';});
   document.querySelectorAll('.sw,.lbtn').forEach(b=>b.classList.remove('on'));
   updateViewer();render();
 }
