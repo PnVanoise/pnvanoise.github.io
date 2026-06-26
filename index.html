@@ -132,25 +132,6 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
         <div class="ct"><span class="sn">2</span>Boucles aux oreilles</div>
         <div class="egrid">
           <div>
-            <div class="elbl">🦻 Oreille Gauche</div>
-            <div class="row">
-              <button class="btn on" data-ear="og" data-n="any">?</button>
-              <button class="btn" data-ear="og" data-n="0">Aucune</button>
-              <button class="btn" data-ear="og" data-n="1">1 couleur</button>
-              <button class="btn" data-ear="og" data-n="2">2 couleurs</button>
-            </div>
-            <div class="slots" id="og-slots">
-              <div>
-                <div class="slotlbl" id="og-lbl-av">Avant</div>
-                <div class="sw-row" id="sw-og-av"></div>
-              </div>
-              <div id="og-ar-wrap" style="display:none">
-                <div class="slotlbl">Arrière</div>
-                <div class="sw-row" id="sw-og-ar"></div>
-              </div>
-            </div>
-          </div>
-          <div>
             <div class="elbl">🦻 Oreille Droite</div>
             <div class="row">
               <button class="btn on" data-ear="od" data-n="any">?</button>
@@ -166,6 +147,25 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
               <div id="od-ar-wrap" style="display:none">
                 <div class="slotlbl">Arrière</div>
                 <div class="sw-row" id="sw-od-ar"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="elbl">🦻 Oreille Gauche</div>
+            <div class="row">
+              <button class="btn on" data-ear="og" data-n="any">?</button>
+              <button class="btn" data-ear="og" data-n="0">Aucune</button>
+              <button class="btn" data-ear="og" data-n="1">1 couleur</button>
+              <button class="btn" data-ear="og" data-n="2">2 couleurs</button>
+            </div>
+            <div class="slots" id="og-slots">
+              <div>
+                <div class="slotlbl" id="og-lbl-av">Avant</div>
+                <div class="sw-row" id="sw-og-av"></div>
+              </div>
+              <div id="og-ar-wrap" style="display:none">
+                <div class="slotlbl">Arrière</div>
+                <div class="sw-row" id="sw-og-ar"></div>
               </div>
             </div>
           </div>
@@ -185,11 +185,11 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
         </div>
         <div class="czones" id="color-zones">
           <div class="czrow">
-            <span class="czlbl">Gauche</span>
+            <span class="czlbl">Droite</span>
             <div class="c2w">
-              <div><div class="c2s">Couleur 1</div><div class="sw-row" id="sw-cg"></div></div>
-              <div id="cg2-wrap" style="display:none"><div class="c2s">Couleur 2</div><div class="sw-row" id="sw-cg2"></div></div>
-              <button class="addbtn" id="add-cg2">+ 2e couleur</button>
+              <div><div class="c2s">Couleur 1</div><div class="sw-row" id="sw-cd"></div></div>
+              <div id="cd2-wrap" style="display:none"><div class="c2s">Couleur 2</div><div class="sw-row" id="sw-cd2"></div></div>
+              <button class="addbtn" id="add-cd2">+ 2e couleur</button>
             </div>
           </div>
           <div class="czrow">
@@ -201,11 +201,11 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
             </div>
           </div>
           <div class="czrow">
-            <span class="czlbl">Droite</span>
+            <span class="czlbl">Gauche</span>
             <div class="c2w">
-              <div><div class="c2s">Couleur 1</div><div class="sw-row" id="sw-cd"></div></div>
-              <div id="cd2-wrap" style="display:none"><div class="c2s">Couleur 2</div><div class="sw-row" id="sw-cd2"></div></div>
-              <button class="addbtn" id="add-cd2">+ 2e couleur</button>
+              <div><div class="c2s">Couleur 1</div><div class="sw-row" id="sw-cg"></div></div>
+              <div id="cg2-wrap" style="display:none"><div class="c2s">Couleur 2</div><div class="sw-row" id="sw-cg2"></div></div>
+              <button class="addbtn" id="add-cg2">+ 2e couleur</button>
             </div>
           </div>
         </div>
