@@ -515,8 +515,8 @@ function renderCard(b) {
   <div class="imeta">${meta}</div>
   <div class="marks2">
     <div class="ears-row">
-      <div class="ear-grp"><div class="ear-sq">${sq(b.og_av)}${sq(b.og_ar)}</div><div class="ear-lbl">O.Gauche</div></div>
       <div class="ear-grp"><div class="ear-sq">${sq(b.od_av)}${sq(b.od_ar)}</div><div class="ear-lbl">O.Droite</div></div>
+      <div class="ear-grp"><div class="ear-sq">${sq(b.og_av)}${sq(b.og_ar)}</div><div class="ear-lbl">O.Gauche</div></div>
     </div>
     ${hc ? `<div class="collar-row">
       <div class="zone-grp"><div class="zone-sq">${sq(b.c_g)}${sq(b.c_g2)}</div><div class="zone-lbl">G</div></div>
@@ -530,7 +530,7 @@ function renderCard(b) {
 
 function render() {
   const list = DATA.filter(matches);
-  document.getElementById('cnt').textContent = list.length + ' animal' + (list.length > 1 ? 'x' : '');
+  document.getElementById('cnt').textContent = list.length + ' ' + (list.length > 1 ? 'animaux' : 'animal');
   const g = document.getElementById('grid');
   if (!DATA.length) return;
   g.innerHTML = list.length
