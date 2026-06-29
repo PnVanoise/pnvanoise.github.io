@@ -359,12 +359,25 @@ function updateViewer() {
   setZone('og-av', F.og_n === '0' ? null : F.og_av);
   setZone('og-ar', F.og_n === '0' ? null : (F.og_n === '2' ? F.og_ar : F.og_av));
   // Collier
-  setZone('c-g',  nc ? null : F.c_g);
-  setZone('c-g2', nc ? null : (F.c_g2 || F.c_g));
-  setZone('c-c1', nc ? null : F.c_c1);
-  setZone('c-c2', nc ? null : (F.c_c2 || F.c_c1));
-  setZone('c-d',  nc ? null : F.c_d);
-  setZone('c-d2', nc ? null : (F.c_d2 || F.c_d));
+  if (nc) {
+    // Pas de collier : tout transparent
+    ['c-g','c-g2','c-c1','c-c2','c-d','c-d2'].forEach(id => setZone(id, null));
+  } else if (F.ct === 'letters' && F.c_lettre) {
+    // Mode lettres : afficher la lettre sur toutes les zones du collier
+    const lv = 'lettre:' + F.c_lettre;
+    ['c-g','c-g2','c-c1','c-c2','c-d','c-d2'].forEach(id => setZone(id, lv));
+  } else if (F.ct === 'letters') {
+    // Mode lettres sans sélection : transparent
+    ['c-g','c-g2','c-c1','c-c2','c-d','c-d2'].forEach(id => setZone(id, null));
+  } else {
+    // Mode couleurs
+    setZone('c-g',  F.c_g);
+    setZone('c-g2', F.c_g2 || F.c_g);
+    setZone('c-c1', F.c_c1);
+    setZone('c-c2', F.c_c2 || F.c_c1);
+    setZone('c-d',  F.c_d);
+    setZone('c-d2', F.c_d2 || F.c_d);
+  }
 }
  
 // ── ÉTAT ─────────────────────────────────────────────────────────────────────
@@ -477,7 +490,7 @@ function initUI() {
     b.addEventListener('click', () => {
       if (F.c_lettre === l) { F.c_lettre = null; b.classList.remove('on'); }
       else { lb.querySelectorAll('.lbtn').forEach(x => x.classList.remove('on')); F.c_lettre = l; b.classList.add('on'); }
-      render();
+      render(); updateViewer();
     });
     lb.appendChild(b);
   });
