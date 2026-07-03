@@ -613,8 +613,7 @@ async function loadData() {
     initUI(); render(); updateViewer();
   } catch(e) {
     document.getElementById('grid').innerHTML =
-      `<div class="err">⚠️ Impossible de charger les données (${e.message})<br>
-       <small>Vérifiez que <strong>bouquetins.csv</strong> et <strong>FaceBouq.svg</strong> sont dans le même dossier.</small></div>`;
+      `<div class="err">⚠️ Impossible de charger les données (${e.message})</div>`;
   }
 }
  
