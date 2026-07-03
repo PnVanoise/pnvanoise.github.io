@@ -36,6 +36,9 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
 .card{background:var(--surf);border:1px solid rgba(0,0,0,.07);border-radius:12px;padding:1.15rem;margin-bottom:.85rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
 .ct{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--gdk);margin-bottom:.75rem;display:flex;align-items:center;gap:.4rem}
 .sn{background:var(--g);color:#fff;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-family:sans-serif;font-size:.6rem;font-weight:700;flex-shrink:0}
+.info-icon{position:relative;display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:var(--g);color:#fff;font-size:.62rem;font-weight:700;font-style:normal;font-family:sans-serif;cursor:help;flex-shrink:0}
+.info-icon .info-tip{position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);width:230px;max-width:70vw;background:var(--gdk);color:#fff;font-size:.72rem;font-weight:400;line-height:1.55;font-family:'Source Serif 4',serif;padding:.55rem .7rem;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.18);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .15s;z-index:20;text-align:left}
+.info-icon:hover .info-tip,.info-icon:focus .info-tip,.info-icon:focus-within .info-tip{opacity:1;visibility:visible}
 .row{display:flex;gap:.28rem;flex-wrap:wrap}
 .btn{padding:.24rem .68rem;border-radius:14px;border:1.5px solid var(--stl);background:transparent;cursor:pointer;font-family:'Source Serif 4',serif;font-size:.72rem;color:var(--txl);transition:all .13s;line-height:1.4}
 .btn:hover{border-color:var(--g);color:var(--g)}
@@ -105,7 +108,6 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
     <!-- ── ILLUSTRATION ── -->
     <div>
       <div class="schema-wrap">
-        <div class="schema-lbl">Schéma en temps réel</div>
         <div id="ibex-container">
           <svg viewBox="0 0 80 80" style="width:100%;height:auto;display:block">
             <text x="40" y="44" text-anchor="middle" font-size="10" fill="#C4B49A" font-family="serif">Chargement…</text>
@@ -127,10 +129,10 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
       </div>
  
       <div class="card">
-        <div class="ct"><span class="sn">2</span>Boucles auriculaires</div>
+        <div class="ct"><span class="sn">2</span>Boucles auriculaires<span class="info-icon" tabindex="0">i<span class="info-tip">Posées sur les jeunes au moment de leur capture. Chaque oreille peut porter une ou deux boucles de couleur différente.</span></span></div>
         <div class="egrid">
           <div>
-            <div class="elbl">🦻 Oreille Droite</div>
+            <div class="elbl">Oreille Droite</div>
             <div class="row">
               <button class="btn on" data-ear="od" data-n="any">?</button>
               <button class="btn" data-ear="od" data-n="0">Aucune</button>
@@ -149,7 +151,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
             </div>
           </div>
           <div>
-            <div class="elbl">🦻 Oreille Gauche</div>
+            <div class="elbl">Oreille Gauche</div>
             <div class="row">
               <button class="btn on" data-ear="og" data-n="any">?</button>
               <button class="btn" data-ear="og" data-n="0">Aucune</button>
@@ -171,7 +173,7 @@ h1{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,3vw,1.7rem);color
       </div>
  
       <div class="card">
-        <div class="ct"><span class="sn">3</span>Collier</div>
+        <div class="ct"><span class="sn">3</span>Collier<span class="info-icon" tabindex="0">i<span class="info-tip">Collier avec fanions : posé sur les adultes, 3 zones de couleur (gauche, centre, droite) forment un code unique par individu. Collier GPS : enregistre automatiquement les déplacements, utilisé pour le suivi de la péri-natalité. Collier VHF : émet un signal radio pour localiser l'animal et vérifier qu'il est toujours en vie.</span></span></div>
         <div class="row" id="collar-pres">
           <button class="btn on" data-cp="any">?</button>
           <button class="btn" data-cp="no">Pas de collier</button>
